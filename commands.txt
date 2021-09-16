@@ -1,0 +1,23 @@
+D:
+
+MKDIR "D:\Projects\SignalR"
+CD "D:\Projects\SignalR"
+dotnet new web -n SignalRServer
+code -r .\SignalRServer\
+... write some code ...
+dotnet build
+dotnet run
+
+
+MKDIR "D:\Projects\SignalR\SignalRClient"
+CD "D:\Projects\SignalR\SignalRClient"
+dotnet tool install -g Microsoft.Web.LibraryManager.CLI
+libman install @aspnet/signalr@next -p unpkg -d lib/SignalR --files dist/browser/signalr.js
+echo "" > SignalRClient.html
+... write some code ...
+
+CD "D:\Projects\SignalR"
+git remote add origin https://github.com/MohamedBayomi/SignalR.git
+git branch -M main
+git push -u origin main
+

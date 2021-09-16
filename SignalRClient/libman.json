@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "defaultProvider": "unpkg",
+  "libraries": [
+    {
+      "library": "@aspnet/signalr@next",
+      "destination": "lib/SignalR",
+      "files": [
+        "dist/browser/signalr.js"
+      ]
+    }
+  ]
+}
